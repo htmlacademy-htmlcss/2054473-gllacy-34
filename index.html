@@ -382,7 +382,10 @@
     <h3 class="visually-hidden">Заказать доставку мороженного</h3>
     <p class="delivery-form-text">Укажите адрес и дату доставки, и мы свяжемся с вами, чтобы подтвердить заказ.</p>
     <div class="delivery-form-group">
-<label for="date" class="form-label">Дата</label>
+<label for="date" class="form-label">Дата <button class="tooltip-i-button tooltip" type="button">
+  <span class="tooltiptext">Введите желаемую дату доставки мороженного
+  </span>
+</button></label>
   <input id="date" type="date" name="delivery-date" value="2020-04-01" max="2022-12-31" min="2020-01-01" required class="form-date delivery-input">
 </div>
 
@@ -393,13 +396,30 @@
 
 
 <div class="delivery-form-group last-group">
-  <label for="address" class="form-label">Адрес</label>
+  <label for="address" class="form-label">Адрес <button class="tooltip-i-button tooltip tooltip-i-second" type="button">
+    <span class="tooltiptext">Введите название улицы, дома и квартиры
+    </span>
+  </button></label>
   <input id="address" type="text" name="delivery-address" placeholder="ул. Большая Конюшенная, 19/8" required class="form-address delivery-input">
   </div>
   <div class="delivery-form-submit-box">
   <button class="subscribe-btn btn" type="submit">Отправить</button>
 </div>
 </form>
+</div>
+
+</section>
+
+
+<section class="feedback">
+  <h3 class="visually-hidden">Форма обратнйо связи</h3>
+<div class="feedback-info-box">
+<p class="feedback-text">Адрес главного офиса <br />и офлайн-магазина:</p>
+<address class="feedback-address">наб. реки Карповки, <br />5 лит П, Санкт-Петербург</address>
+<p class="feedback-text">Для заказов по телефону:</p>
+<a href="tel:+78128121212" class="feedback-tel">+7 (812) 812-12-12</a>
+<p class="feedback-timework">(с 10 до 20 ежедневно)</p>
+<button class="subscribe-btn btn feedback-btn" type="button">Форма обратной связи</button>
 </div>
 
 </section>

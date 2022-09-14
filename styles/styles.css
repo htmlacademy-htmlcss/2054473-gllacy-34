@@ -65,6 +65,7 @@ body {
   text-decoration: none;
   color: #2D3440;
   font-weight: 700;
+  position:relative;
 }
 
 .head {
@@ -702,6 +703,7 @@ body {
   max-width: 570px;
   background-image: url("../images/blog-background.jpg");
   background-repeat: no-repeat;
+  background-position: center;
   background-size: cover;
   border-radius: 16px;
   display: flex;
@@ -734,13 +736,14 @@ body {
   background-size: cover;
   background-color: #FEAFC3;
   padding: 6px;
+  display:flex;
 }
 
 .interesting-subscribe-box {
   border-radius: 16px;
   background-color: #ffffff;
   padding: 26px 26px 26px 26px;
-
+max-width:505px;
 }
 
 .interesting-subscribe-text {
@@ -781,60 +784,59 @@ body {
   border: 4px solid rgba(255, 47, 100, 0.3);
   background-clip: padding-box;
   box-shadow: 0 4px 12px rgb(45 52 64 / 10%);
-  max-width: 160px;
   cursor: pointer;
 }
 
+/* == DELIVERY == */
 
 .delivery {
-width:1170px;
-height:534px;
-margin:0 auto;
-background-image: url("../images/delivery-background.jpg");
-background-repeat: no-repeat;
-background-size: cover;
-border-radius: 16px;
-display:flex;
+  width: 1170px;
+  min-height: 534px;
+  margin: 0 auto;
+  background-image: url("../images/delivery-background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 16px;
+  display: flex;
+  margin-bottom: 80px;
 }
 
 .delivery-left-box {
-/*width:650px;*/
-outline:1px solid green;
-padding-top:167px;
-padding-left:100px;
-padding-bottom:163px;
+  outline: 1px solid green;
+  padding-top: 167px;
+  padding-left: 100px;
+  padding-bottom: 163px;
 }
 
 .delivery-caption {
   font-weight: 900;
   font-size: 32px;
   line-height: 46px;
-  max-width:356px;
-  margin:0;
-  margin-bottom:24px;
+  max-width: 356px;
+  margin: 0;
+  margin-bottom: 24px;
 
 }
 
 .delivery-text {
   font-size: 16px;
   line-height: 22px;
-  margin:0;
-  max-width:372px;
+  margin: 0;
+  max-width: 372px;
 }
 
 .delivery-right-box {
- outline:1px solid yellow;
-padding:64px;
-margin-left:auto;
+  outline: 1px solid yellow;
+  padding: 64px;
+  margin-left: auto;
 }
 
 .delivery-form {
-  width:420px;
-  /*min-height:406px;*/
+  width: 420px;
   background: #FCFCFC;
   box-shadow: 0px 15px 40px rgba(45, 52, 64, 0.12);
   border-radius: 8px;
-  padding:40px 40px 38px 40px;
+  padding: 40px 40px 38px 40px;
   display: flex;
   flex-wrap: wrap;
   column-gap: 16px;
@@ -843,33 +845,34 @@ margin-left:auto;
 .delivery-form-text {
   font-size: 16px;
   line-height: 22px;
-  margin:0;
-  max-width:380px;
+  margin: 0;
+  max-width: 380px;
   margin-bottom: 31px;
 }
 
 .delivery-form-group {
   display: grid;
-    /*grid-template-rows: 30px 80px;
-    row-gap: 5px;*/
-    position: relative;
-    margin: 0;
-    margin-bottom:20px;
+  position: relative;
+  margin: 0;
+  margin-bottom: 20px;
 }
 
 .form-label {
   font-size: 16px;
-line-height: 20px;
-font-weight: 700;
-margin-bottom:8px;
+  line-height: 20px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  position: relative;
 }
 
+
+
 .delivery-input {
-  padding:0;
+  padding: 0;
   border-radius: 4px;
   border: 1px solid #B9B9B9;
-  padding-left:14px;
-  padding-right:16px;
+  padding-left: 14px;
+  padding-right: 16px;
   font-size: 16px;
   line-height: 20px;
   font-family: inherit;
@@ -880,35 +883,167 @@ margin-bottom:8px;
 }
 
 .form-date {
-  width:83px;
-  height:46px;
+  width: 83px;
+  height: 46px;
   color: #B9B9B9;
   font-family: inherit;
   letter-spacing: -0.88px;
-  padding-right:18px;
+  padding-right: 18px;
 }
 
 input[type=date]::-webkit-calendar-picker-indicator {
-  display:none;
+  display: none;
 }
 
 .form-phone {
-  width:254px;
-  height:46px;
+  width: 254px;
+  height: 46px;
 }
 
 .form-address {
-  width:388px;
-  height:46px;
+  width: 388px;
+  height: 46px;
 }
 
 .last-group {
-  margin-bottom:28px;
+  margin-bottom: 28px;
 }
 
 .delivery-form-submit-box {
-  display:flex;
+  display: flex;
   align-items: center;
   justify-content: center;
-width:100%;
+  width: 100%;
+}
+
+/* == Tooltip == */
+
+
+.tooltip-i-button {
+  position: absolute;
+  display: inline-block;
+  outline: none;
+  width: 13px;
+  height: 13px;
+  border: none;
+  background-image: url(../images/svg/Info-delivery.svg);
+  background-color: inherit;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+  bottom: 3px;
+  left: 44px;
+}
+
+.tooltip-i-second {
+  left: 56px;
+}
+
+
+.tooltiptext {
+  visibility: hidden;
+  width: 162px;
+  background: #FCFCFC;
+  border: 1px solid #B9B9B9;
+  box-shadow: 0px 2px 12px rgba(173, 152, 143, 0.18);
+  border-radius: 1px;
+  font-family: "Inter", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  text-align: left;
+  top: -20px;
+  left: 85px;
+  padding: 10px 8px 10px 8px;
+  margin-left: -60px;
+  position: absolute;
+  color: #565C66;
+  z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+.tooltip .tooltiptext::after {
+  content: " ";
+  position: absolute;
+  bottom: 32%;
+  left: -5%;
+  margin-left: -10px;
+  border-width: 10px;
+  border-style: solid;
+  border-color: transparent #fcfcfc transparent transparent;
+}
+
+.tooltip .tooltiptext::before {
+  content: " ";
+  position: absolute;
+  bottom: 32%;
+  left: -6%;
+  margin-left: -10px;
+  border-width: 10px;
+  border-style: solid;
+  border-color: transparent #B9B9B9 transparent transparent;
+
+}
+
+/* == Feedback == */
+.feedback {
+  width: 1106px;
+  min-height: 360px;
+  background-color:transparent;
+  background-image: url("../images/feedback.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 16px;
+  margin: 0 auto;
+  padding: 64px 0px 64px 64px;
+
+}
+
+.feedback-info-box {
+  background: #FCFCFC;
+  border-radius: 8px;
+  padding:40px 40px 38px 40px;
+  display: inline-block;
+  max-width:262px;
+}
+
+.feedback-text {
+  font-size: 16px;
+  line-height: 22px;
+  margin: 0;
+  margin-bottom: 12px;
+}
+
+.feedback-address {
+  font-weight: 700;
+  font-size: 20px;
+  font-style: normal;
+  line-height: 24px;
+  margin: 0;
+  margin-bottom: 23px;
+
+}
+
+.feedback-tel {
+  font-weight: 700;
+  font-size: 20px;
+  font-style: normal;
+  line-height: 24px;
+  text-decoration: none;
+  color:inherit;
+}
+
+.feedback-timework {
+  font-size: 14px;
+line-height: 20px;
+margin:0;
+margin-bottom:28px;
+}
+
+.feedback-btn {
+  left:-5px;
 }
