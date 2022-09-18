@@ -23,10 +23,6 @@
   font-display: swap;
 }
 
-html {
-  height: 100%;
-}
-
 body {
   font-family: "Inter", "Arial", sans-serif;
   font-weight: 400;
@@ -37,13 +33,14 @@ body {
   margin: 0 auto;
   color: #2D3440;
   min-width: 1366px;
-  min-height: 1861px;
+  min-height: 1200px;
 }
 
 .wrapper {
-  display: table;
-  width: 100%;
-  height: 100%;
+  margin: 0 auto;
+  width: 1170px;
+  min-height: 100%;
+  display: grid;
 }
 
 .visually-hidden {
@@ -71,7 +68,6 @@ body {
 .head {
   width: 1170px;
   min-height: 104px;
-  margin: 0 auto;
   outline: 1px solid yellow;
   display: flex;
   align-items: center;
@@ -93,6 +89,7 @@ body {
   margin: 0;
   padding: 0;
   min-height: 56px;
+  max-width: 520px;
 }
 
 .left-menu-item {
@@ -119,6 +116,7 @@ body {
   padding: 0;
   min-height: 32px;
   margin-left: auto;
+  max-width: 430px;
 }
 
 .head-right-menu--phone {
@@ -185,7 +183,6 @@ body {
   outline: 1px solid blue;
   width: 1170px;
   min-height: 554px;
-  margin: 0 auto;
   position: relative;
   margin-bottom: 80px;
 }
@@ -386,13 +383,16 @@ body {
 .slider-socials {
   display: flex;
   flex-wrap: wrap;
-  column-gap: 16px;
+  column-gap: 10px;
   list-style: none;
   padding: 0;
   margin: 0;
   max-width: 150px;
   row-gap: 10px;
   margin-left: auto;
+  position: relative;
+  bottom: -5px;
+  right: -4px;
 }
 
 .slider-social-item {
@@ -401,8 +401,8 @@ body {
 }
 
 .slider-social-item-link {
-  width: 24px;
-  height: 24px;
+  width: 30px;
+  height: 30px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -444,7 +444,6 @@ body {
 .present,
 .popular {
   width: 1170px;
-  margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
   outline: 1px solid orangered;
@@ -488,7 +487,7 @@ body {
 .present-block-left-box {
   width: 317px;
   outline: 1px solid rosybrown;
-  padding: 36px 0 32px 36px;
+  padding: 37px 0 31px 36px;
 }
 
 .present-block-caption {
@@ -513,6 +512,22 @@ body {
 .present-block-right-box {
   display: flex;
   width: 217px;
+}
+
+.rasp-pic::before {
+  content: "";
+  background-image: url(../images/raspberry.png);
+  width: 219px;
+  height: 268px;
+  left: -2px;
+  position: relative;
+}
+
+.marsh-pic {
+  content: "";
+  background-image: url(../images/marshmallow.png);
+  width: 219px;
+  height: 268px;
 }
 
 .present-block-pic {
@@ -601,7 +616,6 @@ body {
 
 .ceo {
   width: 1122px;
-  margin: 0 auto;
   border-radius: 16px;
   background-image: url('../images/wafer.jpg');
   background-repeat: no-repeat;
@@ -615,7 +629,7 @@ body {
 .ceo-block {
   border-radius: 16px;
   background-color: #ffffff;
-  padding: 56px 40px 56px 40px;
+  padding: 56px 40px 40px 40px;
 }
 
 .ceo-block-caption {
@@ -632,6 +646,8 @@ body {
   flex-wrap: wrap;
   row-gap: 40px;
   column-gap: 32px;
+  padding: 0;
+  list-style: none;
 }
 
 .ceo-block-specification {
@@ -639,6 +655,34 @@ body {
   min-height: 66px;
   display: flex;
   column-gap: 16px;
+}
+
+.ice-ceo::before {
+  content: "";
+  width: 48px;
+  height: 48px;
+  background-image: url("../images/svg/ice-ceo.svg");
+}
+
+.bull-ceo::before {
+  content: "";
+  width: 48px;
+  height: 48px;
+  background-image: url("../images/svg/bull-ceo.svg");
+}
+
+.sheet-ceo::before {
+  content: "";
+  width: 48px;
+  height: 48px;
+  background-image: url("../images/svg/sheet-ceo.svg");
+}
+
+.therm-ceo::before {
+  content: "";
+  width: 48px;
+  height: 48px;
+  background-image: url("../images/svg/therm-ceo.svg");
 }
 
 .ceo-text {
@@ -659,7 +703,6 @@ body {
 
 .interesting {
   width: 1170px;
-  margin: 0 auto;
   outline: 1px solid black;
   min-height: 224px;
   display: flex;
@@ -670,7 +713,7 @@ body {
 }
 
 .interesting-blog {
-  max-width: 570px;
+  max-width: 303px;
   background-image: url("../images/blog-background.jpg");
   background-repeat: no-repeat;
   background-position: center;
@@ -693,12 +736,10 @@ body {
   font-size: 24px;
   line-height: 30px;
   margin: 0;
-  width: 303px;
 }
 
 .interesting-subscribe {
   width: 558px;
-  margin: 0 auto;
   border-radius: 16px;
   background-image: url('../images/subscribe.jpg');
   background-repeat: no-repeat;
@@ -760,7 +801,7 @@ body {
 .delivery {
   width: 1170px;
   min-height: 534px;
-  margin: 0 auto;
+  background-color: #f5f5f5;
   background-image: url("../images/delivery-background.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -847,6 +888,7 @@ body {
   color: #B9B9B9;
 }
 
+
 .form-date {
   width: 83px;
   height: 46px;
@@ -858,6 +900,8 @@ body {
 
 input[type=date]::-webkit-calendar-picker-indicator {
   display: none;
+  -webkit-appearance: none;
+  appearance: none;
 }
 
 .form-phone {
@@ -890,7 +934,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
   width: 13px;
   height: 13px;
   border: none;
-  background-image: url(../images/svg/Info-delivery.svg);
+  background-image: url("../images/svg/Info-delivery.svg");
   background-color: inherit;
   background-repeat: no-repeat;
   background-position: center;
@@ -954,13 +998,12 @@ input[type=date]::-webkit-calendar-picker-indicator {
 .feedback {
   width: 1106px;
   min-height: 360px;
-  background-color: transparent;
+  background-color: #eed4d5;
   background-image: url("../images/feedback.png");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   border-radius: 16px;
-  margin: 0 auto;
   padding: 64px 0px 64px 64px;
   margin-bottom: 44px;
 }
@@ -1015,25 +1058,26 @@ input[type=date]::-webkit-calendar-picker-indicator {
 .footer {
   outline: 1px solid black;
   width: 1170px;
-  margin: 0 auto;
   min-height: 109px;
   display: flex;
   align-items: flex-start;
-  padding-left: 6px;
+  padding-left: 2px;
 }
 
 
 .footer-soc-ico {
   display: flex;
   flex-wrap: wrap;
-  column-gap: 16px;
+  column-gap: 10px;
   list-style: none;
   padding: 0;
   margin: 0;
   width: 186px;
   row-gap: 10px;
   outline: 1px solid green;
-  margin-right: 217.5px;
+  margin-right: 220px;
+  position: relative;
+  top: -3px;
 }
 
 .footer-menu-box {
@@ -1090,7 +1134,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
 .footer-logo {
   display: flex;
   flex-direction: column;
-  width: 211px;
+  width: 209px;
   outline: 1px solid green;
   margin-left: auto;
 }
@@ -1098,6 +1142,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
 .footer-link-html {
   display: block;
   outline: none;
+  width: 93px;
 }
 
 .footer-html-logo {
