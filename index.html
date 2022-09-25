@@ -32,6 +32,15 @@
         <ul class="head-left-menu">
           <li class="head-left-menu-item">
             <a href="catalog.html" class="left-menu-item-link">Каталог</a>
+            <div class="catalog-wrapper catalog-hide">
+              <ul class="catalog-list">
+                <li class="catalog-item catalog-item-title">Новики</li>
+                <li class="catalog-item"><a class="catalog-item-link" href="catalog.html">Сливочное</a></li>
+                <li class="catalog-item"><a class="catalog-item-link" href="#">Щербеты</a></li>
+                <li class="catalog-item"><a class="catalog-item-link" href="#">Фруктовый лед</a></li>
+                <li class="catalog-item"><a class="catalog-item-link" href="#">Мелорин</a></li>
+              </ul>
+            </div>
           </li>
           <li class="head-left-menu-item">
             <a href="#" class="left-menu-item-link">Доставка и оплата</a>
@@ -43,6 +52,7 @@
 
         <div class="head-right-menu">
           <a href="tel:+78005558628" class="head-right-menu--phone">+7 800 555-86-28</a>
+          <span class="navigation-item-search">
           <button class="head-right-menu-search head-button" type="button">
             <svg width="16" height="16" fill="none" xmlns="http://www.w3.org/2000/svg" role="img"
               aria-label="Поиск по сайту.">
@@ -51,6 +61,12 @@
                 fill="#2D3440" />
             </svg>
           </button>
+          <form class="form-search form-search-active" action="https://echo.htmlacademy.ru/" method="post">
+            <label class="visually-hidden" for="search-field">Поле поиска</label>
+            <input class="navigation-search" type="search" name="search" id="search-field" placeholder="Поиск по сайту">
+          </form>
+        </span>
+        <span class="navigation-item-login">
           <button class="head-right-menu-login head-button" type="button">
             <svg width="16" height="16" fill="none" xmlns="http://www.w3.org/2000/svg" role="img"
               aria-label="Войти в аккаунт.">
@@ -58,6 +74,22 @@
                 d="M9 1.67c0-.37.3-.67.67-.67h2.66a2 2 0 0 1 2 2v9.33a2 2 0 0 1-2 2H9.67a.67.67 0 1 1 0-1.33h2.66a.67.67 0 0 0 .67-.67V3a.67.67 0 0 0-.67-.67H9.67A.67.67 0 0 1 9 1.67Zm-3.14 2.2a.67.67 0 0 1 .94 0l3.33 3.32a.69.69 0 0 1 .13.18.66.66 0 0 1-.13.77L6.8 11.47a.67.67 0 1 1-.94-.94l2.2-2.2h-6.4a.67.67 0 1 1 0-1.33h6.4l-2.2-2.2a.67.67 0 0 1 0-.94Z"
                 fill="#2D3440" />
             </svg>Вход</button>
+            <form class="form-login form-login-active" action="https://echo.htmlacademy.ru/" method="post">
+              <h4 class="login-title">Личный кабинет</h4>
+              <label class="visually-hidden" for="email-field">email</label>
+              <input class="login" type="email" name="email" id="email-field" placeholder="email@example.com">
+              <label class="visually-hidden" for="password-field">пароль</label>
+              <input class="password" type="password" name="password" id="password-field" placeholder="******">
+              <div class="login-wrapper">
+                <button class="btn-red" type="button">Войти</button>
+                <div class="password-wrapper">
+                  <a class="password-link" href="#">Забыли пароль?</a>
+                  <a class="registration" href="#">Регистрация</a>
+                </div>
+              </div>
+            </form>
+          </span>
+          <span class="navigation-item-thrash">
           <button class="head-right-menu-trash head-button" type="button">
             <svg width="16" height="16" fill="none" xmlns="http://www.w3.org/2000/svg" role="img"
               aria-label="Ваша корзина.">
@@ -66,6 +98,38 @@
                 fill="#2D3440" />
             </svg>
             2 товара</button>
+            <div class="navigation-basket-buy show-basket">
+              <h4 class="navigation-title">Корзина</h4>
+              <ul class="basket-list">
+                <li class="basket-item">
+                  <img class="basket-image" src="images/basket-malinka.png" alt="Малинка." width="46" height="46">
+                  <div class="basket-product-info">
+                    <p class="basket-product-name">Малинка</p>
+                    <span class="basket-product-amount">1 кг х 310 ₽</span>
+                  </div>
+                  <span class="basket-product-price">310 ₽</span>
+                  <button class="basket-close-button" type="button">
+                    <span class="visually-hidden">Закрыть.</span>
+                  </button>
+                </li>
+                <li class="basket-item">
+                  <img class="basket-image" src="images/basket-bublegum.png" alt="Бабл-гам." width="46" height="46">
+                  <div class="basket-product-info">
+                    <p class="basket-product-name">Бабл-гам</p>
+                    <span class="basket-product-amount">1,5 кг х 320 ₽</span>
+                  </div>
+                  <span class="basket-product-price">480 ₽</span>
+                  <button class="basket-close-button" type="button">
+                    <span class="visually-hidden">Закрыть.</span>
+                  </button>
+                </li>
+              </ul>
+              <form class="order" action="get">
+                <button class="btn btn-red order-btn" type="button">Оформить заказ</button>
+                <span class="total-cost">Итого: 790 ₽</span>
+              </form>
+            </div>
+          </span>
         </div>
       </header>
       <main>
@@ -356,7 +420,7 @@
                   <span class="tooltiptext">Введите желаемую дату доставки мороженного
                   </span>
                 </button>
-                <input id="date" type="date" name="delivery-date" value="2020-04-01" max="2022-12-31" min="2020-01-01"
+                <input id="date" type="text" name="delivery-date" value="01.04.2020"
                   required class="form-date delivery-input">
               </div>
 
