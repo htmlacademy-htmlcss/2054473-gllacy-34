@@ -31,7 +31,7 @@
 
         <ul class="head-left-menu">
           <li class="head-left-menu-item">
-            <a href="catalog.html" class="left-menu-item-link">Каталог</a>
+            <a href="#" class="left-menu-item-link">Каталог</a>
             <div class="catalog-wrapper catalog-hide">
               <ul class="catalog-list">
                 <li class="catalog-item catalog-item-title">Новики</li>
@@ -52,28 +52,27 @@
 
         <div class="head-right-menu">
           <a href="tel:+78005558628" class="head-right-menu--phone">+7 800 555-86-28</a>
-          <span class="navigation-item-search">
-          <button class="head-right-menu-search head-button" type="button">
-            <svg width="16" height="16" fill="none" xmlns="http://www.w3.org/2000/svg" role="img"
-              aria-label="Поиск по сайту.">
-              <path fill-rule="evenodd" clip-rule="evenodd"
-                d="M2.66 7.33a4.67 4.67 0 1 1 9.34 0 4.67 4.67 0 0 1-9.34 0Zm8.42 4.69a6 6 0 1 1 .94-.94l2.45 2.45a.67.67 0 1 1-.94.94l-2.45-2.45Z"
-                fill="#2D3440" />
-            </svg>
-          </button>
-          <form class="form-search form-search-active" action="https://echo.htmlacademy.ru/" method="post">
-            <label class="visually-hidden" for="search-field">Поле поиска</label>
-            <input class="navigation-search" type="search" name="search" id="search-field" placeholder="Поиск по сайту">
-          </form>
-        </span>
-        <span class="navigation-item-login">
-          <button class="head-right-menu-login head-button" type="button">
-            <svg width="16" height="16" fill="none" xmlns="http://www.w3.org/2000/svg" role="img"
-              aria-label="Войти в аккаунт.">
-              <path fill-rule="evenodd" clip-rule="evenodd"
-                d="M9 1.67c0-.37.3-.67.67-.67h2.66a2 2 0 0 1 2 2v9.33a2 2 0 0 1-2 2H9.67a.67.67 0 1 1 0-1.33h2.66a.67.67 0 0 0 .67-.67V3a.67.67 0 0 0-.67-.67H9.67A.67.67 0 0 1 9 1.67Zm-3.14 2.2a.67.67 0 0 1 .94 0l3.33 3.32a.69.69 0 0 1 .13.18.66.66 0 0 1-.13.77L6.8 11.47a.67.67 0 1 1-.94-.94l2.2-2.2h-6.4a.67.67 0 1 1 0-1.33h6.4l-2.2-2.2a.67.67 0 0 1 0-.94Z"
-                fill="#2D3440" />
-            </svg>Вход</button>
+          <div class="navigation-item-search">
+            <button class="head-right-menu-search head-button" type="button">
+              <svg width="16" height="16" fill="currentColor" xmlns="http://www.w3.org/2000/svg" role="img"
+                aria-label="Поиск по сайту." class="navigation-ico">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M2.66 7.33a4.67 4.67 0 1 1 9.34 0 4.67 4.67 0 0 1-9.34 0Zm8.42 4.69a6 6 0 1 1 .94-.94l2.45 2.45a.67.67 0 1 1-.94.94l-2.45-2.45Z" />
+              </svg>
+            </button>
+            <form class="form-search form-search-active" action="https://echo.htmlacademy.ru/" method="post">
+              <label class="visually-hidden" for="search-field">Поле поиска</label>
+              <input class="navigation-search" type="search" name="search" id="search-field"
+                placeholder="Поиск по сайту">
+            </form>
+          </div>
+          <div class="navigation-item-login">
+            <button class="head-right-menu-login head-button" type="button">
+              <svg width="16" height="16" fill="currentColor" xmlns="http://www.w3.org/2000/svg" role="img"
+                aria-label="Войти в аккаунт." class="navigation-ico">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M9 1.67c0-.37.3-.67.67-.67h2.66a2 2 0 0 1 2 2v9.33a2 2 0 0 1-2 2H9.67a.67.67 0 1 1 0-1.33h2.66a.67.67 0 0 0 .67-.67V3a.67.67 0 0 0-.67-.67H9.67A.67.67 0 0 1 9 1.67Zm-3.14 2.2a.67.67 0 0 1 .94 0l3.33 3.32a.69.69 0 0 1 .13.18.66.66 0 0 1-.13.77L6.8 11.47a.67.67 0 1 1-.94-.94l2.2-2.2h-6.4a.67.67 0 1 1 0-1.33h6.4l-2.2-2.2a.67.67 0 0 1 0-.94Z" />
+              </svg>Вход</button>
             <form class="form-login form-login-active" action="https://echo.htmlacademy.ru/" method="post">
               <h4 class="login-title">Личный кабинет</h4>
               <label class="visually-hidden" for="email-field">email</label>
@@ -81,23 +80,22 @@
               <label class="visually-hidden" for="password-field">пароль</label>
               <input class="password" type="password" name="password" id="password-field" placeholder="******">
               <div class="login-wrapper">
-                <button class="btn-red" type="button">Войти</button>
+                <button class="subscribe-btn btn" type="button">Войти</button>
                 <div class="password-wrapper">
                   <a class="password-link" href="#">Забыли пароль?</a>
                   <a class="registration" href="#">Регистрация</a>
                 </div>
               </div>
             </form>
-          </span>
-          <span class="navigation-item-thrash">
-          <button class="head-right-menu-trash head-button" type="button">
-            <svg width="16" height="16" fill="none" xmlns="http://www.w3.org/2000/svg" role="img"
-              aria-label="Ваша корзина.">
-              <path fill-rule="evenodd" clip-rule="evenodd"
-                d="M1.17 1.25a.67.67 0 0 0 0 1.33h1.77l.47 2.34v.05l.97 4.84a1.83 1.83 0 0 0 1.82 1.46h5.62a1.83 1.83 0 0 0 1.82-1.46V9.8l.93-4.86a.67.67 0 0 0-.66-.8h-9.3L4.14 1.8a.67.67 0 0 0-.66-.54H1.17Zm4.52 8.3-.81-4.07h8.23l-.78 4.07a.5.5 0 0 1-.49.4H6.18a.5.5 0 0 1-.49-.4ZM4.56 13.5a1.25 1.25 0 1 1 2.49 0 1.25 1.25 0 0 1-2.5 0Zm6.37 0a1.25 1.25 0 1 1 2.5 0 1.25 1.25 0 0 1-2.5 0Z"
-                fill="#2D3440" />
-            </svg>
-            2 товара</button>
+          </div>
+          <div class="navigation-item-thrash">
+            <button class="head-right-menu-trash head-button" type="button">
+              <svg width="16" height="16" fill="currentColor" xmlns="http://www.w3.org/2000/svg" role="img"
+                aria-label="Ваша корзина." class="navigation-ico">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M1.17 1.25a.67.67 0 0 0 0 1.33h1.77l.47 2.34v.05l.97 4.84a1.83 1.83 0 0 0 1.82 1.46h5.62a1.83 1.83 0 0 0 1.82-1.46V9.8l.93-4.86a.67.67 0 0 0-.66-.8h-9.3L4.14 1.8a.67.67 0 0 0-.66-.54H1.17Zm4.52 8.3-.81-4.07h8.23l-.78 4.07a.5.5 0 0 1-.49.4H6.18a.5.5 0 0 1-.49-.4ZM4.56 13.5a1.25 1.25 0 1 1 2.49 0 1.25 1.25 0 0 1-2.5 0Zm6.37 0a1.25 1.25 0 1 1 2.5 0 1.25 1.25 0 0 1-2.5 0Z" />
+              </svg>
+              2 товара</button>
             <div class="navigation-basket-buy show-basket">
               <h4 class="navigation-title">Корзина</h4>
               <ul class="basket-list">
@@ -125,11 +123,11 @@
                 </li>
               </ul>
               <form class="order" action="get">
-                <button class="btn btn-red order-btn" type="button">Оформить заказ</button>
+                <button class="subscribe-btn btn order-btn" type="button">Оформить заказ</button>
                 <span class="total-cost">Итого: 790 ₽</span>
               </form>
             </div>
-          </span>
+          </div>
         </div>
       </header>
       <main>
@@ -292,8 +290,7 @@
             <div class="popular-product-cart-box">
               <p class="popular-product-price">310 ₽/кг</p>
               <button type="button" class="popular-product-buy">
-                <span class="visually-hidden">В корзину.</span>
-                <svg width="15" height="14" fill="currentColor" role="img" aria-label="В корзину"
+                <svg width="15" height="14" fill="currentColor" role="img" aria-label="Купить."
                   xmlns="http://www.w3.org/2000/svg" class="popular-cart-ico">
                   <path fill-rule="evenodd" clip-rule="evenodd"
                     d="M1.17.25a.67.67 0 1 0 0 1.33h1.77l.47 2.34v.05l.97 4.84a1.83 1.83 0 0 0 1.82 1.46h5.62a1.83 1.83 0 0 0 1.82-1.46V8.8l.93-4.86a.67.67 0 0 0-.66-.8h-9.3L4.14.8a.67.67 0 0 0-.66-.54H1.17Zm4.52 8.3-.81-4.07h8.23l-.78 4.07a.5.5 0 0 1-.49.4H6.18a.5.5 0 0 1-.49-.4ZM4.56 12.5a1.25 1.25 0 1 1 2.49 0 1.25 1.25 0 0 1-2.5 0Zm6.37 0a1.25 1.25 0 1 1 2.5 0 1.25 1.25 0 0 1-2.5 0Z" />
@@ -310,7 +307,7 @@
               <p class="popular-product-price">340 ₽/кг</p>
               <button type="button" class="popular-product-buy">
                 <span class="visually-hidden">В корзину.</span>
-                <svg width="15" height="14" fill="currentColor" role="img" aria-label="В корзину"
+                <svg width="15" height="14" fill="currentColor" role="img" aria-label="Купить."
                   xmlns="http://www.w3.org/2000/svg" class="popular-cart-ico">
                   <path fill-rule="evenodd" clip-rule="evenodd"
                     d="M1.17.25a.67.67 0 1 0 0 1.33h1.77l.47 2.34v.05l.97 4.84a1.83 1.83 0 0 0 1.82 1.46h5.62a1.83 1.83 0 0 0 1.82-1.46V8.8l.93-4.86a.67.67 0 0 0-.66-.8h-9.3L4.14.8a.67.67 0 0 0-.66-.54H1.17Zm4.52 8.3-.81-4.07h8.23l-.78 4.07a.5.5 0 0 1-.49.4H6.18a.5.5 0 0 1-.49-.4ZM4.56 12.5a1.25 1.25 0 1 1 2.49 0 1.25 1.25 0 0 1-2.5 0Zm6.37 0a1.25 1.25 0 1 1 2.5 0 1.25 1.25 0 0 1-2.5 0Z" />
@@ -327,7 +324,7 @@
               <p class="popular-product-price">330 ₽/кг</p>
               <button type="button" class="popular-product-buy">
                 <span class="visually-hidden">В корзину.</span>
-                <svg width="15" height="14" fill="currentColor" role="img" aria-label="В корзину"
+                <svg width="15" height="14" fill="currentColor" role="img" aria-label="Купить."
                   xmlns="http://www.w3.org/2000/svg" class="popular-cart-ico">
                   <path fill-rule="evenodd" clip-rule="evenodd"
                     d="M1.17.25a.67.67 0 1 0 0 1.33h1.77l.47 2.34v.05l.97 4.84a1.83 1.83 0 0 0 1.82 1.46h5.62a1.83 1.83 0 0 0 1.82-1.46V8.8l.93-4.86a.67.67 0 0 0-.66-.8h-9.3L4.14.8a.67.67 0 0 0-.66-.54H1.17Zm4.52 8.3-.81-4.07h8.23l-.78 4.07a.5.5 0 0 1-.49.4H6.18a.5.5 0 0 1-.49-.4ZM4.56 12.5a1.25 1.25 0 1 1 2.49 0 1.25 1.25 0 0 1-2.5 0Zm6.37 0a1.25 1.25 0 1 1 2.5 0 1.25 1.25 0 0 1-2.5 0Z" />
@@ -344,7 +341,7 @@
               <p class="popular-product-price">320 ₽/кг</p>
               <button type="button" class="popular-product-buy">
                 <span class="visually-hidden">В корзину.</span>
-                <svg width="15" height="14" fill="currentColor" role="img" aria-label="В корзину"
+                <svg width="15" height="14" fill="currentColor" role="img" aria-label="Купить."
                   xmlns="http://www.w3.org/2000/svg" class="popular-cart-ico">
                   <path fill-rule="evenodd" clip-rule="evenodd"
                     d="M1.17.25a.67.67 0 1 0 0 1.33h1.77l.47 2.34v.05l.97 4.84a1.83 1.83 0 0 0 1.82 1.46h5.62a1.83 1.83 0 0 0 1.82-1.46V8.8l.93-4.86a.67.67 0 0 0-.66-.8h-9.3L4.14.8a.67.67 0 0 0-.66-.54H1.17Zm4.52 8.3-.81-4.07h8.23l-.78 4.07a.5.5 0 0 1-.49.4H6.18a.5.5 0 0 1-.49-.4ZM4.56 12.5a1.25 1.25 0 1 1 2.49 0 1.25 1.25 0 0 1-2.5 0Zm6.37 0a1.25 1.25 0 1 1 2.5 0 1.25 1.25 0 0 1-2.5 0Z" />
@@ -420,8 +417,8 @@
                   <span class="tooltiptext">Введите желаемую дату доставки мороженного
                   </span>
                 </button>
-                <input id="date" type="text" name="delivery-date" value="01.04.2020"
-                  required class="form-date delivery-input">
+                <input id="date" type="text" name="delivery-date" value="01.04.2020" required
+                  class="form-date delivery-input">
               </div>
 
               <div class="delivery-form-group">
