@@ -23,6 +23,10 @@
   font-display: swap;
 }
 
+html {
+  height: 100%;
+}
+
 body {
   font-family: "Inter", "Arial", sans-serif;
   font-weight: 400;
@@ -30,17 +34,13 @@ body {
   line-height: 22px;
   font-style: normal;
   background-color: #FEAFC3;
-  margin: 0 auto;
+  margin: 0;
   color: #2D3440;
+  display: flex;
+  flex-direction: column;
   min-width: 1366px;
-  min-height: 1200px;
-}
-
-.wrapper {
-  margin: 0 auto;
-  width: 1170px;
   min-height: 100%;
-  display: grid;
+
 }
 
 .visually-hidden {
@@ -68,6 +68,7 @@ body {
 
 .head {
   width: 1170px;
+  margin: 0 auto;
   min-height: 104px;
   outline: 1px solid yellow;
   display: flex;
@@ -80,6 +81,18 @@ body {
   height: 56px;
   margin-right: 15px;
   outline: none;
+}
+
+.head-logo:hover {
+  opacity: 0.7;
+}
+
+.head-logo:focus-visible {
+  outline: 2px solid #2D3440;
+}
+
+.head-logo:active {
+  opacity: 0.5;
 }
 
 .head-left-menu {
@@ -149,13 +162,22 @@ body {
   display: none;
 }
 
+.catalog-on:focus-within .catalog-hide {
+  display: block;
+}
+
+.catalog-on:focus-within .left-menu-item-link {
+  background-color: #FF2F64;
+  color: #FCFCFC;
+}
+
 .catalog-wrapper {
-  width: 138px;
+  width: 135px;
   position: absolute;
-  left: 16px;
   top: 44px;
+  left: 2px;
   padding-bottom: 8px;
-  box-shadow: 0 8px 16px rgba(45, 52, 64, 0.12);
+  box-shadow: 0 8px 16px rgb(45 52 64 / 12%);
   background-color: #fcfcfc;
   border-radius: 4px;
   z-index: 4;
@@ -169,7 +191,7 @@ body {
 
 .catalog-item-link {
   display: block;
-  padding: 8px 16px;
+  padding: 6px 13px 6px 16px;
   font-size: 14px;
   line-height: 20px;
   color: #2d3440;
@@ -198,8 +220,10 @@ body {
 .catalog-item-title {
   padding: 16px;
   padding-bottom: 0;
+  font-size: 14px;
+  line-height: 20px;
   font-weight: 700;
-  margin-bottom: 24px;
+  margin-bottom: 15px;
 }
 
 .catalog-item-title::after {
@@ -207,7 +231,7 @@ body {
   width: 102px;
   height: 1px;
   left: 16px;
-  top: 48px;
+  top: 46px;
   background-color: #b9b9b9;
   content: "";
 }
@@ -237,8 +261,16 @@ body {
   outline: none;
 }
 
+.head-right-menu--phone:hover {
+  opacity: 0.9;
+}
+
 .head-right-menu--phone:focus-visible {
   outline: 2px solid #2d3440;
+}
+
+.head-right-menu--phone:active {
+  opacity: 0.6;
 }
 
 .head-button {
@@ -303,8 +335,8 @@ body {
 .form-search {
   position: absolute;
   box-sizing: border-box;
-  top: 52px;
-  left: -316px;
+  top: 40px;
+  left: -324px;
   padding: 24px 16px;
   background-color: #fcfcfc;
   color: #b9b9b9;
@@ -325,29 +357,60 @@ body {
   background-color: #ffffff;
   box-sizing: border-box;
   border-radius: 4px;
-  padding: 13px 16px;
   outline: none;
-  padding-right: 35px;
+  padding: 13px 35px 13px 16px;
 }
 
-input[type="search" i]::-webkit-search-cancel-button {
-  appearance: none;
+
+.form-search-close {
   position: absolute;
-  content: "";
-  right: 16px;
-  top: 19px;
+  right: 30px;
+  top: 43px;
   margin: 0;
+  width: 12px;
+  height: 12px;
+  opacity: 0.4;
   display: block;
-  width: 10px;
-  height: 10px;
-  box-sizing: border-box;
-  background-image: url(../images/svg/close.svg);
+  background-color: transparent;
+  background-image: url(../images/svg/close-black.svg);
   background-repeat: no-repeat;
   cursor: pointer;
+  border: none;
 }
 
-input[type="search" i]::-webkit-search-cancel-button:hover {
-  background-image: url(../images/svg/close-black.svg);
+.navigation-search:hover {
+  border: 1px solid #2d3440;
+}
+
+.navigation-search:focus-visible {
+  padding: 12px 35px 12px 15px;
+  border: 2px solid #2d3440;
+}
+
+.navigation-search:active .x-hide {
+  display: block;
+}
+
+.navigation-search:disabled {
+  background: #e7e7e7;
+}
+
+.navigation-search-error {
+  border: 1px solid #ea5454;
+}
+
+.navigation-search-error:hover {
+  padding: 12px 16px 12px 14px;
+  border: 2px solid #ea5454;
+}
+
+.navigation-search:disabled {
+  background-color: #B9B9B9;
+}
+
+.navigation-search:disabled::placeholder {
+  color: #2D3440;
+  opacity: 0.6;
 }
 
 .head-right-menu-login {
@@ -390,7 +453,7 @@ input[type="search" i]::-webkit-search-cancel-button:hover {
 
 .form-login {
   position: absolute;
-  top: 52px;
+  top: 40px;
   right: 0;
   width: 420px;
   padding: 48px;
@@ -414,7 +477,7 @@ input[type="search" i]::-webkit-search-cancel-button:hover {
 .login,
 .password {
   width: 100%;
-  padding: 14px 16px;
+  padding: 13px 15px;
   background-color: #ffffff;
   border: 1px solid #b9b9b9;
   box-sizing: border-box;
@@ -428,12 +491,14 @@ input[type="search" i]::-webkit-search-cancel-button:hover {
 }
 
 .password {
-  margin-bottom: 32px;
+  margin-bottom: 29px;
 }
 
 .login-wrapper {
   display: flex;
   flex-wrap: wrap;
+  position: relative;
+  left: -5px;
 }
 
 .password-wrapper {
@@ -473,6 +538,22 @@ input[type="search" i]::-webkit-search-cancel-button:hover {
 .registration::after {
   width: 89px;
 }
+
+.password-link:hover,
+.registration:hover {
+  opacity: 0.9;
+}
+
+.password-link:focus-visible,
+.registration:focus-visible {
+  outline: 2px solid #2D3440;
+}
+
+.password-link:active,
+.registration:active {
+  opacity: 0.6;
+}
+
 
 /* end login popup */
 
@@ -516,15 +597,15 @@ input[type="search" i]::-webkit-search-cancel-button:hover {
 
 .navigation-basket-buy {
   position: absolute;
-  top: 52px;
+  top: 40px;
   right: 0;
   background-color: #fcfcfc;
   border-radius: 4px;
-  padding: 48px;
+  padding: 48px 48px 44px 48px;
   width: 441px;
   box-sizing: border-box;
   z-index: 4;
-  box-shadow: 0 8px 16px rgba(45, 52, 64, 0.12);
+  box-shadow: 0 8px 16px rgb(45 52 64 / 12%);
 }
 
 .navigation-title {
@@ -563,6 +644,19 @@ input[type="search" i]::-webkit-search-cancel-button:hover {
   background-position: center;
   border: none;
   cursor: pointer;
+  outline: none;
+}
+
+.basket-close-button:hover {
+  opacity: 0.9;
+}
+
+.basket-close-button:focus-visible {
+  outline: 2px solid #2d3440;
+}
+
+.basket-close-button:active {
+  opacity: 0.6;
 }
 
 .order {
@@ -573,7 +667,7 @@ input[type="search" i]::-webkit-search-cancel-button:hover {
 }
 
 .order-btn {
-  margin-left: -4px;
+  margin-left: -5px;
 }
 
 .total-cost {
@@ -605,6 +699,7 @@ input[type="search" i]::-webkit-search-cancel-button:hover {
 }
 
 .basket-product-amount {
+  font-size: 14px;
   line-height: 20px;
   color: #b9b9b9;
 }
@@ -616,7 +711,37 @@ input[type="search" i]::-webkit-search-cancel-button:hover {
   font-weight: 700;
 }
 
+
+/* Thrash empty == */
+
+.navigation-basket-empty {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 40px;
+  width: 288px;
+  box-sizing: border-box;
+  padding: 48px 20px;
+  background: #fcfcfc;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.basket-title {
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 700;
+  padding: 0;
+  margin: 0;
+}
+
 /* == Slider == */
+
+.main-container {
+  flex-grow: 1;
+  width: 1170px;
+  margin: 0 auto;
+}
 
 .slider {
   outline: 1px solid blue;
@@ -921,6 +1046,7 @@ input[type="search" i]::-webkit-search-cancel-button:hover {
   display: block;
   z-index: 1;
   color: #FCFCFC;
+  outline: none;
 }
 
 .slider-social-item-link:hover.slider-social-item-link::after {
@@ -968,8 +1094,6 @@ input[type="search" i]::-webkit-search-cancel-button:hover {
   text-align: center;
   min-width: 435px;
   max-width: 585px;
-  min-height: 92px;
-  max-height: 550px;
   margin: 0 auto;
 }
 
@@ -1009,6 +1133,7 @@ input[type="search" i]::-webkit-search-cancel-button:hover {
 .present-block-right-box {
   display: flex;
   width: 217px;
+  align-items: flex-end;
 }
 
 .rasp-pic::before {
@@ -1020,11 +1145,13 @@ input[type="search" i]::-webkit-search-cancel-button:hover {
   position: relative;
 }
 
-.marsh-pic {
+.marsh-pic::before {
   content: "";
   background-image: url(../images/marshmallow.png);
   width: 219px;
   height: 268px;
+  left: -2px;
+  position: relative;
 }
 
 .present-block-pic {
@@ -1232,9 +1359,10 @@ input[type="search" i]::-webkit-search-cancel-button:hover {
 
 .interesting-blog {
   max-width: 303px;
+  background-color: #FCFCFC;
   background-image: url("../images/blog-background.jpg");
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: bottom;
   background-size: cover;
   border-radius: 16px;
   display: flex;
@@ -1283,14 +1411,13 @@ input[type="search" i]::-webkit-search-cancel-button:hover {
 
 .form-subscribe {
   display: flex;
-  column-gap: 14px;
+  column-gap: 12px;
   align-items: center;
 }
 
 .form-subscribe-input {
-  width: 332px;
-  height: 43px;
-  padding-left: 16px;
+  width: 333px;
+  padding: 13px 17px 13px 15px;
   font-family: inherit;
   font-size: 16px;
   line-height: 20px;
@@ -1303,6 +1430,41 @@ input[type="search" i]::-webkit-search-cancel-button:hover {
   color: #B9B9B9;
 }
 
+.input-field {
+  outline: none;
+}
+
+.input-field:hover {
+  border: 1px solid #2d3440;
+}
+
+.input-field:focus-visible {
+  padding: 12px 16px 12px 14px;
+  border: 2px solid #2d3440;
+}
+
+.input-field:disabled {
+  background: #e7e7e7;
+}
+
+.input-field-error {
+  border: 1px solid #ea5454;
+}
+
+.input-field-error:hover {
+  padding: 12px 16px 12px 14px;
+  border: 2px solid #ea5454;
+}
+
+.input-field:disabled {
+  background-color: #B9B9B9;
+}
+
+.input-field:disabled::placeholder {
+  color: #2D3440;
+  opacity: 0.6;
+}
+
 .subscribe-btn {
   padding: 12px 33px;
   display: inline-flex;
@@ -1312,6 +1474,7 @@ input[type="search" i]::-webkit-search-cancel-button:hover {
   background-clip: padding-box;
   cursor: pointer;
   box-shadow: 0 4px 12px rgba(45, 52, 64, 0.1);
+  outline: none;
 }
 
 .subscribe-btn:hover {
@@ -1349,6 +1512,7 @@ input[type="search" i]::-webkit-search-cancel-button:hover {
   background-color: #f5f5f5;
   background-image: url("../images/delivery-background.jpg");
   background-repeat: no-repeat;
+  background-position: bottom;
   background-size: cover;
   border-radius: 16px;
   display: flex;
@@ -1419,14 +1583,12 @@ input[type="search" i]::-webkit-search-cancel-button:hover {
 }
 
 .delivery-input {
-  padding: 0;
   border-radius: 4px;
   border: 1px solid #B9B9B9;
-  padding-left: 14px;
-  padding-right: 16px;
   font-size: 16px;
   line-height: 20px;
   font-family: inherit;
+  padding: 13px 17px 13px 15px;
 }
 
 .delivery-input::placeholder {
@@ -1435,10 +1597,7 @@ input[type="search" i]::-webkit-search-cancel-button:hover {
 
 .form-date {
   width: 83px;
-  height: 46px;
   color: #B9B9B9;
-  font-family: inherit;
-  padding-right: 18px;
 }
 
 input[type=date]::-webkit-calendar-picker-indicator {
@@ -1448,13 +1607,11 @@ input[type=date]::-webkit-calendar-picker-indicator {
 }
 
 .form-phone {
-  width: 254px;
-  height: 46px;
+  width: 253px;
 }
 
 .form-address {
-  width: 388px;
-  height: 46px;
+  width: 386px;
 }
 
 .last-group {
@@ -1544,7 +1701,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
   min-height: 360px;
   background-color: #eed4d5;
   background-image: url("../images/feedback.png");
-  background-position: center;
+  background-position: bottom;
   background-size: cover;
   background-repeat: no-repeat;
   border-radius: 16px;
@@ -1574,6 +1731,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
   line-height: 24px;
   margin: 0;
   margin-bottom: 23px;
+  padding: 0;
 }
 
 .feedback-tel {
@@ -1583,6 +1741,18 @@ input[type=date]::-webkit-calendar-picker-indicator {
   line-height: 24px;
   text-decoration: none;
   color: inherit;
+}
+
+.feedback-tel:hover {
+  opacity: 0.9;
+}
+
+.feedback-tel:focus-visible {
+  outline: 2px solid #2d3440;
+}
+
+.feedback-tel:active {
+  opacity: 0.6;
 }
 
 .feedback-timework {
@@ -1601,6 +1771,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
 .footer {
   outline: 1px solid black;
   width: 1170px;
+  margin: 0 auto;
   min-height: 109px;
   display: flex;
   align-items: flex-start;
@@ -1695,11 +1866,23 @@ input[type=date]::-webkit-calendar-picker-indicator {
   display: block;
   outline: none;
   width: 93px;
+  margin-bottom: 14px;
+}
+
+.footer-link-html:hover {
+  opacity: 0.7;
+}
+
+.footer-link-html:focus-visible {
+  outline: 2px solid #2D3440;
+}
+
+.footer-link-html:active {
+  opacity: 0.5;
 }
 
 .footer-html-logo {
   display: block;
-  margin-bottom: 14px;
 }
 
 .footer-text-madein {
@@ -1913,8 +2096,10 @@ input[type=date]::-webkit-calendar-picker-indicator {
   padding: 8px 24px;
   list-style: none;
   display: flex;
+  flex-wrap: wrap;
   background-color: rgba(252, 252, 252, 0.3);
   border-radius: 20px;
+
 }
 
 .sorting-type-list .sorting-type-item:last-child {
@@ -1923,6 +2108,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
 
 .sorting-last {
   padding: 10px 24px;
+  max-width: 915px;
 }
 
 
@@ -2068,6 +2254,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
   border: 2px solid #fcfcfc;
   border-radius: 20px;
   padding: 0 53px;
+  max-height: 38px;
   cursor: pointer;
   outline: none;
 }
