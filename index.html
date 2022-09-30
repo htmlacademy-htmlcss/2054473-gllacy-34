@@ -188,12 +188,55 @@
         </div>
 
 
-        <div class="slide_banana">
+        <div class="slide-banana slide-hide">
+          <div class="slide-left-box">
+            <h2 class="slide-caption">Сливочное мороженое<br> со вкусом банана</h2>
+            <p class="slide-text">Сливочное мороженое с ярким банановым вкусом подарит вам свежесть и наслаждение даже в
+              самый жаркий летний день.</p>
+
+            <a href="#" class="slide-btn btn">Заказать</a>
+          </div>
+
+          <div class="slide-right-box">
+            <div class="slide-right-big-pic">
+              <img src="images/ice-banana.png" width="234" height="507" alt="Клубничный пломбир."
+                class="slide-right-main-pic">
+            </div>
+            <div class="slide-right-sm-pic">
+              <img src="images/marshmellou-min.png" width="66" height="150" alt="Сливочное мороженное."
+                class="slide-right-min-pic">
+            </div>
+            <div class="slide-right-sm-pic">
+              <img src="images/jam-min.png" width="66" height="150" alt="Карамельный пломбир."
+                class="slide-right-min-pic">
+            </div>
+          </div>
 
         </div>
 
-        <div class="slide_marshmellou">
+        <div class="slide-marsh slide-hide">
+          <div class="slide-left-box">
+            <h2 class="slide-caption">Карамельный пломбир<br> с маршмеллоу</h2>
+            <p class="slide-text">Необычный сладкий десерт с карамельным топпингом и кусочками зефира завоюет сердца
+              сладкоежек всех возрастов.</p>
 
+            <a href="#" class="slide-btn btn">Заказать</a>
+          </div>
+
+          <div class="slide-right-box">
+            <div class="slide-right-big-pic">
+              <img src="images/ice-marshmellou.png" width="234" height="507" alt="Клубничный пломбир."
+                class="slide-right-main-pic">
+            </div>
+            <div class="slide-right-sm-pic">
+              <img src="images/jam-min.png" width="66" height="150" alt="Сливочное мороженное."
+                class="slide-right-min-pic">
+            </div>
+            <div class="slide-right-sm-pic">
+              <img src="images/banana-min.png" width="66" height="150" alt="Карамельный пломбир."
+                class="slide-right-min-pic">
+            </div>
+          </div>
         </div>
 
 
@@ -530,7 +573,35 @@
             academy</a> © 2021</p>
       </div>
     </footer>
-    <!--POPUP-->
+
+    <div class="modal-container modal-container-close">
+      <div class="modal modal-auth">
+        <button class="modal-close-button" type="button">
+          <span class="visually-hidden">Закрыть.</span>
+        </button>
+        <section class="modal-content">
+          <h2 class="modal-title">Мы обязательно ответим вам!</h2>
+          <form class="auth-form" action="https://echo.htmlacademy.ru/" method="post">
+            <div class="auth-group">
+              <label class="visually-hidden" for="auth-name">Имя и фамилия</label>
+              <input class="auth-form-field field" type="text" id="auth-name" name="name" placeholder="Имя и фамилия"
+                required>
+            </div>
+            <div class="auth-group">
+              <label class="visually-hidden" for="auth-email">Ваша почта</label>
+              <input class="auth-form-field field" type="email" id="auth-email" name="email"
+                placeholder="email@example.com" required>
+            </div>
+            <div class="auth-group">
+              <textarea class="auth-form-text field" name="text" placeholder="В свободной форме" rows="6"></textarea>
+            </div>
+            <div class="modal-btn-box">
+              <button class="subscribe-btn btn" type="submit">Отправить</button>
+            </div>
+          </form>
+        </section>
+      </div>
+    </div>
 
   </body>
 
